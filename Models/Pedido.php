@@ -19,6 +19,7 @@ class Pedido {
         $this->cantidad = $cantidad;
     }
 
+    // METODOS GET DE LA CLASE PEDIDO
     public function getIdMedicamento() {
         return $this->idMedicamento;
     }
@@ -44,6 +45,7 @@ class Pedido {
     }
 
 
+    // METODOS SET DE LA CLASE PEDIDO
     public function setIdMedicamento($idMedicamento) {
         $this->idMedicamento = $idMedicamento;
 
@@ -71,5 +73,4 @@ class Pedido {
 
 
 }
-
 

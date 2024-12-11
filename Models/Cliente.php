@@ -1,9 +1,13 @@
 <?php
 class Cliente {
+
+    // DECLARACION DE VARIABLES
     private $id;
     private $direccion;
     private $telefono;
     private $email;
+
+    //CONSTRUCTOR CON PARAMETROS DE LA CLASE CLIENTE
 
     public function __construct($id, $direccion, $telefono, $email) {
         $this->id = $id;
@@ -12,6 +16,8 @@ class Cliente {
         $this->email = $email;
     }
 
+
+    // METODOS GET DE LA CLASE CLIENTE
 
     public function getId() {
         return $this->id;
@@ -29,6 +35,7 @@ class Cliente {
         return $this->email;
     }
 
+    // METODOS SET DE LA CLASE CLIENTE
  
     public function setId($id) {
         $this->id = $id;

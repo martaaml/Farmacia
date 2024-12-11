@@ -7,7 +7,7 @@ class User {
     private $password;
     private $isAdmin;
 
-
+    // CONSTRUCTOR CON PARAMETROS DE LA CLASE USER
     public function __construct($nombre, $usuario, $email, $password,$isAdmin) {
         $this->nombre = $nombre;
         $this->usuario = $usuario;
@@ -16,6 +16,8 @@ class User {
         $this->isAdmin=$isAdmin;
     }
 
+
+    // METODOS GET DE LA CLASE USER
     public function getNombre() {
         return $this->nombre;
     }
@@ -35,6 +37,8 @@ class User {
     public function getIsAdmin(){
         return $this->isAdmin;
     }
+
+    // METODOS SET DE LA CLASE USER
 
     public function setNombre($nombre) {
         $this->nombre = $nombre;

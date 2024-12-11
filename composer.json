@@ -1,0 +1,15 @@
+{
+    "name": "martuu/farmacia",
+    "autoload": {
+        "psr-4": {
+            "Martuu\\Farmacia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marta Marín Lorente",
+            "email": "martamarinlorente@gmail.com"
+        }
+    ],
+    "require": {}
+}

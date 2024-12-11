@@ -1,12 +1,14 @@
 <?php
 class Medicamento {
     
+    // DECLARACION DE VARIABLES
     private $idMedicamento;
     private $codigo;
     private $nombre;
     private $descripcion;
     private $cantidad;
 
+    //CONSTRUCTOR CON PARAMETROS DE LA CLASE MEDICAMENTO
 
     public function __construct($idMedicamento, $codigo, $nombre, $descripcion, $cantidad) {
         $this->idMedicamento = $idMedicamento;
@@ -16,6 +18,7 @@ class Medicamento {
         $this->cantidad = $cantidad;
     }
 
+    // METODOS GET DE LA CLASE MEDICAMENTO
     public function getIdMedicamento() {
         return $this->idMedicamento;
     }
@@ -36,6 +39,7 @@ class Medicamento {
         return $this->cantidad;
     }
 
+    // METODOS SET DE LA CLASE MEDICAMENTO
 
     public function setIdMedicamento($idMedicamento) {
         $this->idMedicamento = $idMedicamento;
