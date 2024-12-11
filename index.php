@@ -1,30 +1,28 @@
-<?php
- function registrarPedido($pdo, $correoCliente) {
+<!DOCTYPE html>
+<html lang="en">
 
-        $stmt = $pdo->prepare("SELECT id FROM empleados WHERE id = :idUser");
-        $stmt->execute(['idUser' => $this->idUser]);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        if ($stmt->rowCount() === 0) {
-            return "El empleado no está identificado en el sistema.";
-        }
+<body>
+    <?php
+    // Cargo todas las clases
+    require_once("vendor/autoload.php");
+    // Carga del archivo de configuracion
+    require_once("config/config.php");
+    // Carga del header para la vista
+    require_once('views/layout/header.php');
+    // Uso el FrontController para mostrar el controlador por defecto configurado en el archivo config
+    use Controllers\FrontController; 
+    // Carga de la función main del controlado.
+    FrontController::main();
+    // Carga del footer para la vista
+    require_once('views/layout/footer.php');
+    ?>
+</body>
 
-        // Verificar que se proporciona el correo del cliente
-        if (empty($correoCliente)) {
-            return "Se necesita solicitar al menos el correo del cliente.";
-        }
-
-        // Registrar el pedido en la base de datos
-        $stmt = $pdo->prepare("INSERT INTO pedidos (codigo_pedido, id_cliente, id_user, precio, id_medicamento, cantidad, correo_cliente, fecha_pedido) 
-                               VALUES (:codigoPedido, :idCliente, :idUser, :precio, :idMedicamento, :cantidad, :correoCliente, NOW())");
-        $stmt->execute([
-            'codigoPedido' => $this->codigoPedido,
-            'idCliente' => $this->idCliente,
-            'idUser' => $this->idUser,
-            'precio' => $this->precio,
-            'idMedicamento' => $this->idMedicamento,
-            'cantidad' => $this->cantidad,
-            'correoCliente' => $correoCliente
-        ]);
-
-        return "Pedido anotado exitosamente.";
-    }
+</html>

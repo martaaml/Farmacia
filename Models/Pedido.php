@@ -1,4 +1,5 @@
 <?php
+namespace Models;
 class Pedido {
     
     private $codigoPedido;
@@ -7,7 +8,7 @@ class Pedido {
     private $cantidad;
     private $idMedicamento;
     private $precio;
-
+    private $fecha;
 
     public function __construct($codigoPedido, $idCliente, $idUser, $precio, $idMedicamento,$cantidad) {
        
@@ -44,6 +45,9 @@ class Pedido {
         return $this->precio;
     }
 
+    public function getFecha(){
+        return $this->fecha;
+    }
 
     // METODOS SET DE LA CLASE PEDIDO
     public function setIdMedicamento($idMedicamento) {
@@ -71,6 +75,8 @@ class Pedido {
         $this->precio = $precio;
     }
 
-
+    public function setFecha($fecha) {
+        $this->fecha = $fecha;
+    }
 }
 

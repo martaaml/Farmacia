@@ -1,6 +1,10 @@
 <?php
+
+namespace Models;
+
 class Cliente {
 
+ 
     // DECLARACION DE VARIABLES
     private $id;
     private $direccion;
